@@ -19,7 +19,7 @@ Full Stack Engineer with 3 years of Web and Mobile Experience
 - [![](svgs/brands/linkedin.svg)in/cjshearer](https://linkedin.com/in/cjshearer "My LinkedIn")
 - [![](svgs/solid/house.svg)cjshearer.dev](https://cjshearer.dev "My Website")
 - [![](svgs/solid/envelope.svg)cjshearer@live.com](mailto:cjshearer@live.com "My Email")
-{class="not-prose *:inline-svg inline-flex w-fit flex-wrap justify-center gap-4 whitespace-nowrap [&_svg]:mr-1"}
+{class="pl-0 my-0 not-prose inline-flex list-none w-fit flex-wrap justify-center gap-4 whitespace-nowrap [&_svg]:inline-svg [&_svg]:mr-1"}
 
 </header>
 
