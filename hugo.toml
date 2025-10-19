@@ -1,44 +1,56 @@
 baseURL = "https://cjshearer.dev"
-defaultContentLanguage = "en"
-disableKinds = [ "RSS", "section", "sitemap", "taxonomy", "term" ]
-languageCode = "en-us"
+disableKinds = [ "rss", "taxonomy" ]
+languageCode = "en-US"
 
-[markup.goldmark.parser]
-wrapStandAloneImageWithinParagraph = false
 [markup.goldmark.parser.attribute]
+# attributes can only be added to markdown elements when this is enabled
 block = true
 [markup.goldmark.renderer]
+# the resume example uses a div to group the skills together, which requires unsafe html rendering
 unsafe = true
 [markup.goldmark.renderHooks.image]
-enableDefault = true
+# svg rendering in the footer fails without this setting
+useEmbedded = 'fallback'
+[markup.highlight]
+anchorLineNos = true
+# hugo's default usage of chroma for syntax highlighting uses inline css, which cannot use media
+# queries for light/dark mode, so we vendor the classes in the static folder instead
+noClasses = false
+lineNos = true
+lineNumbersInTable = false
 
 [[menus.header]]
 name = "Cody Shearer"
 pageRef = "/"
 weight = 10
+[[menus.header]]
+name = "posts"
+pageRef = "posts"
+weight = 20
+[[menus.header]]
+name = "resume"
+pageRef = "resume"
+weight = 30
 
 [[menus.footer]]
 pre = "![](svgs/brands/github.svg)"
 name = "cjshearer"
-pageRef = "https://github.com/cjshearer"
+url = "https://github.com/cjshearer"
 weight = 10
 [[menus.footer]]
 name = "in/cjshearer"
-pageRef = "https://linkedin.com/in/cjshearer"
-pre = """![](svgs/brands/linkedin.svg)
-{.dark-invert .inline-img}"""
+url = "https://linkedin.com/in/cjshearer"
+pre = '![](svgs/brands/linkedin.svg)'
 weight = 20
 [[menus.footer]]
 name = "cjshearer.dev"
-pageRef = "https://cjshearer.dev"
-pre = """![](svgs/solid/house.svg)
-{.dark-invert .inline-img}"""
+url = "https://cjshearer.dev"
+pre = "![](svgs/solid/house.svg)"
 weight = 30
 [[menus.footer]]
 name = "cjshearer@live.com"
 pageRef = "mailto:cjshearer@live.com"
-pre = """![](svgs/solid/envelope.svg)
-{.dark-invert .inline-img}"""
+pre = "![](svgs/solid/envelope.svg)"
 weight = 40
 
 [[module.imports]]
@@ -50,6 +62,9 @@ path = "github.com/FortAwesome/Font-Awesome"
 [[module.imports.mounts]]
 source = "svgs"
 target = "assets/svgs"
+
+[permalinks]
+posts = "posts/:year-:month-:day/:slug/"
 
 [params.author]
 name = "Cody Shearer"
@@ -64,11 +79,11 @@ path = "head/favicon.html"
 favicon = "💼"
 [[params.head.partials]]
 path = "head/css.html"
-css = [ "main.css", "custom.css"]
+# imports must declared before other rules, so they are separated here
+css = [ "imports.css", "main.css", "custom.css"]
 [params.page]
 width = "8.5in"
 height = "11in"
 margin = "0.4in"
 [[params.head.partials]]
 path = "head/pagedjs.html"
-
