@@ -1,6 +1,6 @@
 +++
 title = "Building Feedback Loops with entr"
-date = "2025-12-23"
+date = "2025-12-24"
 +++
 
 Having started my career in web development, I've always appreciated the fast feedback loops built into frontend tooling. Hot-reloading makes iteration seamless, but outside web development, such tooling is rare. Here, I show how I use [entr](https://github.com/eradman/entr) to fill those gaps.
