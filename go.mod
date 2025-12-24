@@ -4,5 +4,5 @@ go 1.22.3
 
 require (
 	github.com/FortAwesome/Font-Awesome v0.0.0-20240402185447-c0f460dca7f7 // indirect
-	github.com/cjshearer/modern-hugo-resume v0.0.0-20251018171158-ca6d91679467 // indirect
+	github.com/cjshearer/modern-hugo-resume v0.0.0-20251224154537-1370f6919ec2 // indirect
 )
