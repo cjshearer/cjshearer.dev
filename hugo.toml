@@ -1,4 +1,4 @@
-baseURL = "https://cjshearer.dev"
+baseURL = "https://www.cjshearer.dev"
 disableKinds = [ "rss", "taxonomy" ]
 languageCode = "en-US"
 
@@ -44,7 +44,7 @@ pre = '![](svgs/brands/linkedin.svg)'
 weight = 20
 [[menus.footer]]
 name = "cjshearer.dev"
-url = "https://cjshearer.dev"
+url = "https://www.cjshearer.dev"
 pre = "![](svgs/solid/house.svg)"
 weight = 30
 [[menus.footer]]
