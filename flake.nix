@@ -85,7 +85,7 @@
                 # 1. Replace the existing hash with `pkgs.lib.fakeHash`
                 # 2. Run `nix build` or push to GitHub (it will fail and provide the new hash)
                 # 3. Substitute the new hash (`nix build` should now work)
-                outputHash = "sha256-j0uvxEmJ2iondphp9FFvWESj7Xr5o4edQEler9ACtAc=";
+                outputHash = "sha256-o5nOfJ1kPWjM5swTpNvW60c5yCuxCjvvLGNlUXfyHsU=";
               };
             in
             ''
